@@ -1,5 +1,6 @@
 import { Card, Typography, Divider, Timeline, List, Tag, Row, Col, Avatar, Space } from 'antd';
 import { EnvironmentOutlined, MailOutlined, PhoneOutlined, CalendarOutlined, UserOutlined } from '@ant-design/icons';
+import avatarImage from '../assets/images/ds3.jpeg';  // 正确导入图片
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -11,16 +12,25 @@ const AboutMe = () => {
                     <Card>
                         {/* Header Section */}
                         <div style={{ textAlign: 'center', marginBottom: '24px' }}>
-                            <Avatar size={100} icon={<UserOutlined />} />
+                            <Avatar 
+                                size={120}  // 设置更大的尺寸
+                                src={avatarImage}  // 使用导入的图片
+                                style={{
+                                    width: '120px',
+                                    height: '120px',
+                                    objectFit: 'cover',  // 确保图片填充整个空间
+                                    border: '2px solid #f0f0f0'  // 添加边框效果
+                                }}
+                            />
                             <Title level={2} style={{ marginBottom: '8px', marginTop: '16px' }}>张程博 / Bob Zhang</Title>
                             <div>
-                                <Text type="secondary"><MailOutlined /> bobzhang8829@gmail.com</Text>
+                                <Text type="secondary"><MailOutlined />  bobzhang8829@gmail.com</Text>
                                 <br />
-                                <Text type="secondary"><PhoneOutlined /> 17873169132(CN) / 0493943335(AU)</Text>
+                                <Text type="secondary"><PhoneOutlined />  17873169132(CN) / 0493943335(AU)</Text>
                                 <br />
-                                <Text type="secondary"><EnvironmentOutlined /> Sydney, Australia</Text>
+                                <Text type="secondary"><EnvironmentOutlined />  Sydney, Australia</Text>
                                 <br />
-                                <Text type="secondary"><CalendarOutlined /> 2001-06-16 (24)</Text>
+                                <Text type="secondary"><CalendarOutlined />  2001-06-16 (24)</Text>
                             </div>
                         </div>
 
