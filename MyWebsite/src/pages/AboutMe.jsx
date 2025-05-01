@@ -1,42 +1,75 @@
 import { Card, Typography, Divider, Timeline, List, Tag, Row, Col, Avatar, Space } from 'antd';
-import { EnvironmentOutlined, MailOutlined, PhoneOutlined, CalendarOutlined, UserOutlined } from '@ant-design/icons';
+import { EnvironmentOutlined, MailOutlined, PhoneOutlined, CalendarOutlined, UserOutlined, ClockCircleOutlined } from '@ant-design/icons';
 import avatarImage from '../assets/images/ds3.jpeg';  // 正确导入图片
 
 const { Title, Text, Paragraph } = Typography;
 
 const AboutMe = () => {
     return (
-        <div style={{ padding: '24px', background: '#f0f2f5', minHeight: '100vh' }}>
+        <div style={{ 
+            padding: '32px 24px',  
+            background: 'linear-gradient(to bottom, #f0f2f5, #fff)', 
+            minHeight: '100vh' 
+        }}>
             <Row justify="center">
                 <Col xs={24} sm={24} md={20} lg={16} xl={14}>
-                    <Card>
+                    <Card 
+                        style={{ 
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.05)',  // 更柔和的阴影
+                            borderRadius: '16px'  // 更圆润的边角
+                        }}
+                    >
                         {/* Header Section */}
-                        <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+                        <div style={{ textAlign: 'center', marginBottom: '32px' }}>
                             <Avatar 
-                                size={120}  // 设置更大的尺寸
-                                src={avatarImage}  // 使用导入的图片
+                                size={150}  // 更大的头像
+                                src={avatarImage}
                                 style={{
-                                    width: '120px',
-                                    height: '120px',
-                                    objectFit: 'cover',  // 确保图片填充整个空间
-                                    border: '2px solid #f0f0f0'  // 添加边框效果
+                                    width: '150px',
+                                    height: '150px',
+                                    objectFit: 'cover',
+                                    border: '3px solid #1890ff',  // antd 主题蓝色边框
+                                    boxShadow: '0 4px 12px rgba(24,144,255,0.15)'  // 蓝色阴影效果
                                 }}
                             />
-                            <Title level={2} style={{ marginBottom: '8px', marginTop: '16px' }}>张程博 / Bob Zhang</Title>
-                            <div>
-                                <Text type="secondary"><MailOutlined />  bobzhang8829@gmail.com</Text>
-                                <br />
-                                <Text type="secondary"><PhoneOutlined />  17873169132(CN) / 0493943335(AU)</Text>
-                                <br />
-                                <Text type="secondary"><EnvironmentOutlined />  Sydney, Australia</Text>
-                                <br />
-                                <Text type="secondary"><CalendarOutlined />  2001-06-16 (24)</Text>
+                            <Title level={2} style={{ 
+                                marginBottom: '8px', 
+                                marginTop: '20px',
+                                fontSize: '28px',  // 更大的字号
+                                color: 'black',
+                                WebkitBackgroundClip: 'text',
+                            }}>
+                                张程博 / Bob Zhang
+                            </Title>
+                            <div style={{ marginTop: '16px' }}>
+                                <Space direction="vertical" size={12}> 
+                                    <Text type="secondary">
+                                        <MailOutlined style={{ marginRight: '8px', color: '#1890ff' }} />
+                                        bobzhang8829@gmail.com
+                                    </Text>
+                                    <Text type="secondary">
+                                        <PhoneOutlined style={{ marginRight: '8px', color: '#1890ff' }} />
+                                        17873169132(CN) / 0493943335(AU)
+                                    </Text>
+                                    <Text type="secondary">
+                                        <EnvironmentOutlined style={{ marginRight: '8px', color: '#1890ff' }} />
+                                        Sydney, Australia
+                                    </Text>
+                                    <Text type="secondary">
+                                        <CalendarOutlined style={{ marginRight: '8px', color: '#1890ff' }} />
+                                        2001-06-16 (24)
+                                    </Text>
+                                </Space>
                             </div>
                         </div>
 
                         {/* Self Introduction */}
                         <div style={{ marginBottom: '24px' }}>
-                            <Title level={3}>自我评价</Title>
+                            <Title level={3} style={{
+                                borderLeft: '4px solid #1890ff',  // 左边框装饰
+                                paddingLeft: '12px',
+                                marginBottom: '20px'
+                            }}>自我评价</Title>
                             <Paragraph>计算机入门，基础的前端知识, 能独立解决问题。</Paragraph>
                         </div>
 
@@ -46,9 +79,11 @@ const AboutMe = () => {
                         <div style={{ marginBottom: '24px' }}>
                             <Title level={3}>教育经历</Title>
                             <Timeline
+                                style={{ padding: '16px' }}  // 添加内边距
                                 items={[
                                     {
-                                        color: 'blue',
+                                        color: '#1890ff',  // 使用主题色
+                                        dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,  // 自定义时间点图标
                                         children: (
                                             <>
                                                 <Title level={4}>中南大学 (长沙, 中国)</Title>
@@ -62,7 +97,8 @@ const AboutMe = () => {
                                         ),
                                     },
                                     {
-                                        color: 'blue',
+                                        color: '#1890ff',
+                                        dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />,
                                         children: (
                                             <>
                                                 <Title level={4}>新南威尔士大学 (悉尼, 澳大利亚)</Title>
@@ -84,7 +120,19 @@ const AboutMe = () => {
                         {/* Projects */}
                         <div style={{ marginBottom: '24px' }}>
                             <Title level={3}>项目经历</Title>
-                            <Card title="在线问答游戏" extra={<Text type="secondary">02/2020–06/2023</Text>}>
+                            <Card 
+                                title={
+                                    <span style={{ color: '#1890ff', fontWeight: 'bold' }}>
+                                        在线问答游戏
+                                    </span>
+                                } 
+                                extra={<Text type="secondary">02/2020–06/2023</Text>}
+                                style={{ 
+                                    borderRadius: '8px',
+                                    marginBottom: '16px' 
+                                }}
+                                hoverable  // 添加悬停效果
+                            >
                                 <div style={{ marginBottom: '16px' }}>
                                     <Tag color="blue">React</Tag>
                                     <Tag color="green">Vitest</Tag>
@@ -149,8 +197,10 @@ const AboutMe = () => {
                         {/* Language Skills */}
                         <div>
                             <Title level={3}>语言能力</Title>
-                            <Space size={[0, 8]} wrap>
-                                <Tag color="blue">英语六级</Tag>
+                            <Space size={[8, 16]} wrap>  // 增加标签间距
+                                <Tag color="blue" style={{ padding: '4px 12px', borderRadius: '16px' }}>
+                                    英语六级
+                                </Tag>
                                 <Tag color="green">雅思 7.5 分</Tag>
                                 <Tag color="cyan">听力: 8</Tag>
                                 <Tag color="cyan">阅读: 9</Tag>
