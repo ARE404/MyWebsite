@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import RouterView from './router/RouterVIew.jsx'
+import RouterView from './router/RouterView.jsx'
 function App() {
   return (
     <RouterView />
