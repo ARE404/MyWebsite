@@ -8,9 +8,12 @@ const NavBar = () => {
     return (
         <Menu mode="horizontal" theme="light">
             <Menu.Item key="home" icon={<HomeOutlined />}>
-                <Link to="/">About Me</Link>
-                <Link to="/articles">Articles</Link>
+                <span><Link to="/">About Me</Link></span>
             </Menu.Item>
+            <Menu.Item key="article" >
+                <span><Link to="/articles">Articles</Link></span>
+            </Menu.Item>
+            
         </Menu>
     );
 };
