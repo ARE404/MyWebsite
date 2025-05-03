@@ -7,7 +7,8 @@ const PageLayout = ( {children} ) => {
         <div style={{ 
             padding: '32px 24px',  
             background: 'linear-gradient(to bottom, #f0f2f5, #fff)', 
-            minHeight: '100vh' 
+            minHeight: '100vh', 
+            width: '1280px'
         }}>
             <Row justify="center">
                 <Col xs={24} sm={24} md={20} lg={16} xl={14}>

@@ -1,0 +1,64 @@
+/* Header Section */
+.about-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.about-avatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #1890ff;
+    box-shadow: 0 4px 12px rgba(24,144,255,0.15);
+}
+
+.about-title {
+    margin-bottom: 8px;
+    margin-top: 20px;
+    font-size: 28px;
+    color: black;
+    -webkit-background-clip: text;
+}
+
+.contact-info {
+    margin-top: 16px;
+}
+
+.contact-item {
+    margin-right: 8px;
+    color: #1890ff;
+}
+
+/* Education Section */
+.education-section {
+    margin-bottom: 24px;
+}
+
+.timeline-container {
+    padding: 16px;
+}
+
+.timeline-icon {
+    font-size: 16px;
+}
+
+.course-tags {
+    margin-top: 8px;
+}
+
+.course-tag {
+    margin: 0 4px;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* Common Styles */
+.section-divider {
+    margin: 24px 0;
+}
+
+.section-title {
+    margin-bottom: 16px;
+    color: #1890ff;
+    font-weight: 600;
+} 
