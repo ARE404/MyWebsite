@@ -27,7 +27,7 @@ const AboutMe = () => {
                 </Title>
                 <Paragraph>计算机入门，有时写点东西</Paragraph>
                 <div className="contact-info">
-                    <Space direction="vertical" size={12}>
+                    <Space direction="vertical" size={0}>
                         <Text type="secondary">
                             <MailOutlined className="contact-item" />
                             bobzhang8829@gmail.com

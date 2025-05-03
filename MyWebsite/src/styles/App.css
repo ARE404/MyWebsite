@@ -1,51 +1,71 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body background */
+body {
+  min-height: 100vh;
+  background: transparent;
+  overflow-x: hidden;
+}
+
+
+
 /* App-level styles */
 #root {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-  }
-  
-  /* Global layout */
-  .app-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Responsive container */
-  .content-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    width: 100%;
-    flex: 1;
-  }
-  
-  /* Utility classes */
-  .text-center {
-    text-align: center;
-  }
-  
-  .full-width {
-    width: 100%;
-  }
-  
-  /* Animation utilities */
-  .fade-enter {
-    opacity: 0;
-  }
-  
-  .fade-enter-active {
-    opacity: 1;
-    transition: opacity 300ms ease-in;
-  }
-  
-  .fade-exit {
-    opacity: 1;
-  }
-  
-  .fade-exit-active {
-    opacity: 0;
-    transition: opacity 300ms ease-in;
-  }
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+/* Global layout */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive container with glass effect */
+.content-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Animation utilities */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}

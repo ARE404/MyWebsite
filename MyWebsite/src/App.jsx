@@ -1,8 +1,13 @@
 import RouterView from './router/RouterView.jsx'
+import AnimatedBackground from './components/AnimatedBackground'
 import './styles/App.css'
+
 function App() {
   return (
-    <RouterView />
+    <>
+      <AnimatedBackground />
+      <RouterView />
+    </>
   )
 }
 
