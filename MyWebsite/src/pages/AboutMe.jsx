@@ -9,6 +9,7 @@ import {
 } from '@ant-design/icons';
 import avatarImage from '../assets/images/ds3.jpeg';
 import '../styles/AboutMe.css';
+import ThreeDText from '../components/ThreeDText';
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -25,6 +26,8 @@ const AboutMe = () => {
                 <Title level={2} className="about-title">
                     张程博 / Bob Zhang
                 </Title>
+                
+                
                 <Paragraph>计算机入门，有时写点东西</Paragraph>
                 <div className="contact-info">
                     <Space direction="vertical" size={0}>
@@ -97,6 +100,94 @@ const AboutMe = () => {
             </div>
 
             <Divider className="section-divider" />
+
+            {/* Project Experience */}
+            <div className="experience-section">
+                <Title level={3} className="section-title">项目经历</Title>
+                <Timeline
+                    className="timeline-container"
+                    items={[
+                        {
+                            color: '#1890ff',
+                            dot: <ClockCircleOutlined className="timeline-icon" />,
+                            children: (
+                                <>
+                                    <Title level={4}>在线问答游戏</Title>
+                                    <Text type="secondary">02/2020–06/2023</Text>
+                                    <Tag color="blue" style={{ marginLeft: '8px' }}>React</Tag>
+                                    <Tag color="blue">Vitest</Tag>
+                                    <Tag color="blue">Git</Tag>
+                                    <Tag color="blue">Unit Test</Tag>
+                                    <Paragraph style={{ marginTop: '8px' }}>
+                                        • 协作完成了一个完整的前端开发项目，基于React.js独立搭建了一个单页应用（SPA），对接后端API实现用户注册登录、游戏管理、实时答题等核心功能。
+                                    </Paragraph>
+                                    <Paragraph>
+                                        • 推动并落实代码规范与版本管理（Git），完成全程无错误Linting，提升团队协作效率。
+                                    </Paragraph>
+                                    <Paragraph>
+                                        • 设计并执行组件测试与端到端测试（UI Testing），显著提升系统可靠性。
+                                    </Paragraph>
+                                </>
+                            ),
+                        },
+                    ]}
+                />
+            </div>
+
+            <Divider className="section-divider" />
+
+            {/* Internship Experience */}
+            <div className="experience-section">
+                <Title level={3} className="section-title">实习经历</Title>
+                <Timeline
+                    className="timeline-container"
+                    items={[
+                        {
+                            color: '#1890ff',
+                            dot: <ClockCircleOutlined className="timeline-icon" />,
+                            children: (
+                                <>
+                                    <Title level={4}>Smart Choice Professional（悉尼, 澳大利亚）</Title>
+                                    <Text type="secondary">06/2024–09/2024</Text>
+                                    <Paragraph style={{ fontWeight: 'bold', marginTop: '8px' }}>数据分析实习生</Paragraph>
+                                    <Paragraph>
+                                        负责管理多个数据驱动的项目，致力于提升数据分析的准确性和效率。使用Python相关技术和Excel进行数据清洗和可视化，以及使用Numpy和Pandas进行统计分析。为客户提供直观的报告，帮助客户深入理解行业数据洞察，支持业务决策。
+                                    </Paragraph>
+                                </>
+                            ),
+                        },
+                        {
+                            color: '#1890ff',
+                            dot: <ClockCircleOutlined className="timeline-icon" />,
+                            children: (
+                                <>
+                                    <Title level={4}>上海交通大学（上海, 中国）</Title>
+                                    <Text type="secondary">12/2024–01/2025</Text>
+                                    <Paragraph style={{ fontWeight: 'bold', marginTop: '8px' }}>国际暑校助教实习生</Paragraph>
+                                    <Paragraph>
+                                        实习期间担任项目管理创新技术和数据处理要素两门课程的助教，主要负责考勤管理、解答同学疑问、协助老师准备课程材料、批改作业和试卷等。
+                                    </Paragraph>
+                                </>
+                            ),
+                        },
+                    ]}
+                />
+            </div>
+
+            <Divider className="section-divider" />
+
+            {/* Language Skills */}
+            <div className="skills-section">
+                <Title level={3} className="section-title">语言能力</Title>
+                <Space direction="vertical" size={16} style={{ width: '100%', maxWidth: '900px' }}>
+                    <Card>
+                        <Space wrap>
+                            <Tag color="blue">英语六级</Tag>
+                            <Tag color="blue">雅思 7.5 分 (听力8 阅读9)</Tag>
+                        </Space>
+                    </Card>
+                </Space>
+            </div>
         </>
     );
 };

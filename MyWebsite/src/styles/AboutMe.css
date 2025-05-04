@@ -17,6 +17,7 @@
     margin-top: 20px;
     font-size: 28px;
     color: black;
+    background-clip: text;
     -webkit-background-clip: text;
 }
 
@@ -32,10 +33,14 @@
 /* Education Section */
 .education-section {
     margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .timeline-container {
     padding: 16px;
+    max-width: 900px;
 }
 
 .timeline-icon {
@@ -52,6 +57,32 @@
     border-radius: 4px;
 }
 
+/* Experience Section */
+.experience-section {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-section {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Timeline customization */
+.ant-timeline-item-content {
+    text-align: left;
+}
+
+.ant-card {
+    width: 100%;
+    text-align: center;
+}
+
 /* Common Styles */
 .section-divider {
     margin: 24px 0;
@@ -61,4 +92,23 @@
     margin-bottom: 16px;
     color: #1890ff;
     font-weight: 600;
+    border: 2px solid rgba(0, 153, 255, 0.644);
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+/* Target Ant Design h3 titles */
+h3.ant-typography {
+    font-style: underline !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .timeline-container {
+        padding: 16px 8px;
+    }
+    
+    .ant-timeline-item-content {
+        padding-left: 16px;
+    }
 } 
