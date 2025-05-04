@@ -13,12 +13,24 @@
 }
 
 .about-title {
-    margin-bottom: 8px;
     margin-top: 20px;
+    margin-bottom: 0;
     font-size: 28px;
     color: black;
     background-clip: text;
     -webkit-background-clip: text;
+}
+
+.moto {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 16px 0;
+    margin-top: 0;
+}
+
+.moto > *:first-child:not(:only-child) {
+    display: none;
 }
 
 .contact-info {
@@ -86,6 +98,8 @@
 /* Common Styles */
 .section-divider {
     margin: 24px 0;
+    border: 1px solid #0099ffa4;
+    opacity: 0.3;
 }
 
 .section-title {
@@ -111,4 +125,4 @@ h3.ant-typography {
     .ant-timeline-item-content {
         padding-left: 16px;
     }
-} 
+}

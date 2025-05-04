@@ -27,8 +27,10 @@ const AboutMe = () => {
                     张程博 / Bob Zhang
                 </Title>
                 
+                <div className='moto'>
+                    <ThreeDText></ThreeDText>
+                </div>
                 
-                <Paragraph>计算机入门，有时写点东西</Paragraph>
                 <div className="contact-info">
                     <Space direction="vertical" size={0}>
                         <Text type="secondary">
@@ -188,6 +190,7 @@ const AboutMe = () => {
                     </Card>
                 </Space>
             </div>
+
         </>
     );
 };
